@@ -26,6 +26,7 @@ public class GDPRDefinitions {
     public static GDPRNetwork STARTAPP = null;
     public static GDPRNetwork IRONSOURCE = null;
     public static GDPRNetwork APPODEAL = null;
+    public static GDPRNetwork MOBFOX = null;
 
     // -------------------
     // Others
@@ -52,7 +53,7 @@ public class GDPRDefinitions {
         INMOBI = new GDPRNetwork(context, "InMobi", "https://www.inmobi.com/privacy-policy-for-eea", R.string.gdpr_type_ads, true);
         MOPUB = new GDPRNetwork(context, "MoPub", "https://www.mopub.com/legal/privacy", R.string.gdpr_type_ads, true)
                 .withIsIntermediator("https://www.mopub.com/legal/partners/");
-        VUNGLE = new GDPRNetwork(context, "InMobi", "https://vungle.com/privacy", R.string.gdpr_type_ads, true);
+        VUNGLE = new GDPRNetwork(context, "Vungle", "https://vungle.com/privacy", R.string.gdpr_type_ads, true);
         ADCOLONY = new GDPRNetwork(context, "AdColony", "https://www.adcolony.com/privacy-policy", R.string.gdpr_type_ads, true);
         UNITY = new GDPRNetwork(context, "Unity", "https://unity3d.com/legal/privacy-policy", R.string.gdpr_type_ads, true);
         APPLOVIN = new GDPRNetwork(context, "AppLovin", "https://www.applovin.com/privacy", R.string.gdpr_type_ads, true);
@@ -67,6 +68,7 @@ public class GDPRDefinitions {
         IRONSOURCE = new GDPRNetwork(context, "ironSource", "https://developers.ironsrc.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/", R.string.gdpr_type_ads, true);
         APPODEAL = new GDPRNetwork(context, "Appodeal", "https://www.appodeal.com/privacy-policy", R.string.gdpr_type_ads, true)
                 .withIsIntermediator("https://www.appodeal.com/home/partners-privacy-policies/");
+        MOBFOX = new GDPRNetwork(context, "Mobfox", "https://www.mobfox.com/privacy-policy/", R.string.gdpr_type_ads, true);
 
         // init others
         String firebase = "Firebase";
