@@ -223,15 +223,6 @@ public class GDPR {
         return mLogger;
     }
 
-    /**
-     * check if GDPR was initialised or not
-     *
-     * @return true, if {@link GDPR#init(Context)} was called, false otherwise
-     */
-    public boolean isInitialised() {
-        return mPreferences != null;
-    }
-
     // ------------------
     // private helper functions
     // ------------------

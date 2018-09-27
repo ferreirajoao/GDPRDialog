@@ -1,4 +1,4 @@
-### GDPRDialog [![Release](https://jitpack.io/v/MFlisar/GDPRDialog.svg)](https://jitpack.io/#MFlisar/GDPRDialog) ![Localisation](https://img.shields.io/badge/Localisation-9%2F24%20(38%25)-blue.svg)
+### GDPRDialog [![Release](https://jitpack.io/v/MFlisar/GDPRDialog.svg)](https://jitpack.io/#MFlisar/GDPRDialog) ![Localisation](https://img.shields.io/badge/Localisation-5%2F24%20(21%25)-blue.svg)
 
 Simple reusable `DialogFragment`.
 
@@ -17,7 +17,7 @@ This library offers following:
   * allow *personalised ads* or *paid version* only
   * allow *personalised ads*, *non personalised ads* or *paid or free version*
   * combine whatever you want here...
-* optionally enable location checks (supports google's check from the SDK via the internet, `TelephoneManager`, `TimeZone`, `Locale`) and also allows to define to use fallback methods, by providing your own list of checks sorted by their priority
+* optionally enable google's check if user is requesting consent form within the EAA and even use fallback methods to using `TelephoneManager` and/or `TimeZone`
 * optionally adds a `Checkbox` for age confirmation
 * uses soft opt in by default if you offer e.g. a *personalised ads* vs *non personalised ads* version
 * it closes the app if the user did not give any consent (i.e if the user clicks the back button in the dialog)
@@ -43,7 +43,7 @@ repositories {
 2. add the compile statement to your module's `build.gradle`:
 ```java
 dependencies {
-     implementation 'com.github.MFlisar:GDPRDialog:1.2.6'
+     implementation 'com.github.MFlisar:GDPRDialog:1.2.3'
 }
 ```
 
@@ -69,7 +69,6 @@ GDPRSetup setup = new GDPRSetup(GDPRDefinitions.ADMOB) // add all networks you u
     .withShortQuestion(true)
     .withLoadAdMobNetworks(publisherId(s)) // e.g. "pub-0123456789012345"
     .withNoToolbarTheme(noToolbarTheme)
-    .withShowPaidOrFreeInfoText(true) // show the info that this app is cheap/free based on the networks or hide it
 ;
 GDPR.getInstance().checkIfNeedsToBeShown(this /* extends AppCompatActivity & GDPR.IGDPRCallback */, setup);
 ```
@@ -114,7 +113,7 @@ Migrations will be explained in the [release notes](https://github.com/MFlisar/G
 
 ### TODO
 
-* [ ] Localisation ![Localisation](https://img.shields.io/badge/Localisation-9%2F24%20(38%25)-blue.svg)
+* [ ] Localisation ![Localisation](https://img.shields.io/badge/Localisation-5%2F24%20(21%25)-blue.svg)
   
   At least translations for all official languages within the european union should be added
   * [ ] Bulgarian
@@ -125,7 +124,7 @@ Migrations will be explained in the [release notes](https://github.com/MFlisar/G
   * [x] English
   * [ ] Estonian
   * [ ] Finnish
-  * [x] French
+  * [ ] French
   * [x] German
   * [ ] Greek
   * [ ] Hungarian
@@ -134,10 +133,10 @@ Migrations will be explained in the [release notes](https://github.com/MFlisar/G
   * [ ] Latvian
   * [ ] Lithuanian
   * [ ] Maltese
-  * [x] Polish
-  * [x] Portuguese
+  * [ ] Polish
+  * [ ] Portuguese
   * [ ] Romanian
-  * [x] Slovak
+  * [ ] Slovak
   * [ ] Slovenian
   * [x] Spanish
   * [ ] Swedish
